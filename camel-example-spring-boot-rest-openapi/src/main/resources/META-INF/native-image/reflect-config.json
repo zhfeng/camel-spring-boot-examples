@@ -1,5 +1,8 @@
 [
 {
+  "name":"boolean[]"
+},
+{
   "name":"ch.qos.logback.classic.pattern.DateConverter",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -233,6 +236,18 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"double[]"
+},
+{
+  "name":"int[]"
+},
+{
+  "name":"java.beans.PropertyVetoException"
+},
+{
+  "name":"java.io.FilePermission"
+},
+{
   "name":"java.io.Serializable",
   "allDeclaredMethods":true,
   "allPublicMethods":true
@@ -244,7 +259,8 @@
 },
 {
   "name":"java.lang.Class",
-  "allDeclaredMethods":true
+  "allDeclaredMethods":true,
+  "methods":[{"name":"getModule","parameterTypes":[] }]
 },
 {
   "name":"java.lang.Class[]"
@@ -263,12 +279,35 @@
   "allPublicMethods":true
 },
 {
+  "name":"java.lang.Module",
+  "allDeclaredMethods":true,
+  "methods":[
+    {"name":"getName","parameterTypes":[] }, 
+    {"name":"isExported","parameterTypes":["java.lang.String"] }
+  ]
+},
+{
+  "name":"java.lang.ModuleLayer",
+  "methods":[
+    {"name":"boot","parameterTypes":[] }, 
+    {"name":"configuration","parameterTypes":[] }
+  ]
+},
+{
   "name":"java.lang.Object",
   "allDeclaredMethods":true,
   "allPublicMethods":true
 },
 {
   "name":"java.lang.Object[]"
+},
+{
+  "name":"java.lang.Runtime",
+  "methods":[{"name":"version","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Runtime$Version",
+  "methods":[{"name":"major","parameterTypes":[] }]
 },
 {
   "name":"java.lang.RuntimePermission"
@@ -308,12 +347,31 @@
   "allDeclaredMethods":true
 },
 {
+  "name":"java.lang.module.Configuration",
+  "methods":[{"name":"modules","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.module.ModuleReference",
+  "methods":[{"name":"location","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.module.ResolvedModule",
+  "methods":[{"name":"reference","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.reflect.AccessibleObject",
+  "methods":[{"name":"canAccess","parameterTypes":["java.lang.Object"] }]
+},
+{
   "name":"java.lang.reflect.AnnotatedElement",
   "allPublicMethods":true
 },
 {
   "name":"java.lang.reflect.GenericDeclaration",
   "allPublicMethods":true
+},
+{
+  "name":"java.lang.reflect.InaccessibleObjectException"
 },
 {
   "name":"java.lang.reflect.Proxy",
@@ -324,13 +382,30 @@
   "allPublicMethods":true
 },
 {
+  "name":"java.net.NetPermission"
+},
+{
   "name":"java.net.SocketPermission"
+},
+{
+  "name":"java.net.URLConnection",
+  "methods":[{"name":"setDefaultUseCaches","parameterTypes":["java.lang.String","boolean"] }]
+},
+{
+  "name":"java.net.URLPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
 },
 {
   "name":"java.security.AllPermission"
 },
 {
   "name":"java.security.MessageDigestSpi"
+},
+{
+  "name":"java.security.SecureRandomParameters"
+},
+{
+  "name":"java.security.SecurityPermission"
 },
 {
   "name":"java.sql.DriverManager"
@@ -356,6 +431,13 @@
   "name":"java.util.HashSet"
 },
 {
+  "name":"java.util.Optional",
+  "methods":[
+    {"name":"get","parameterTypes":[] }, 
+    {"name":"isPresent","parameterTypes":[] }
+  ]
+},
+{
   "name":"java.util.PropertyPermission"
 },
 {
@@ -366,8 +448,22 @@
   "name":"java.util.concurrent.Executor"
 },
 {
+  "name":"java.util.concurrent.Flow$Publisher"
+},
+{
   "name":"java.util.concurrent.ThreadFactory",
   "allPublicMethods":true
+},
+{
+  "name":"java.util.jar.JarFile",
+  "methods":[
+    {"name":"<init>","parameterTypes":["java.io.File","boolean","int","java.lang.Runtime$Version"] }, 
+    {"name":"isMultiRelease","parameterTypes":[] }, 
+    {"name":"runtimeVersion","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.util.logging.LogManager"
 },
 {
   "name":"java.util.logging.SimpleFormatter",
@@ -477,7 +573,7 @@
   "allDeclaredMethods":true
 },
 {
-  "name":"javax.xml.ws.WebServiceRef"
+  "name":"long[]"
 },
 {
   "name":"org.apache.camel.CamelContext",
@@ -604,6 +700,12 @@
     {"name":"body","parameterTypes":[] }, 
     {"name":"bodyAs","parameterTypes":["java.lang.Class"] }, 
     {"name":"constant","parameterTypes":["java.lang.Object"] }, 
+    {"name":"csimple","parameterTypes":["java.lang.String"] }, 
+    {"name":"csimple","parameterTypes":["java.lang.String","java.lang.Class"] }, 
+    {"name":"datasonnet","parameterTypes":["java.lang.String"] }, 
+    {"name":"datasonnet","parameterTypes":["java.lang.String","java.lang.Class"] }, 
+    {"name":"datasonnet","parameterTypes":["org.apache.camel.Expression"] }, 
+    {"name":"datasonnet","parameterTypes":["org.apache.camel.Expression","java.lang.Class"] }, 
     {"name":"deadLetterChannel","parameterTypes":["java.lang.String"] }, 
     {"name":"deadLetterChannel","parameterTypes":["org.apache.camel.Endpoint"] }, 
     {"name":"defaultErrorHandler","parameterTypes":[] }, 
@@ -709,7 +811,8 @@
   "name":"org.apache.camel.component.bean.BeanEndpointConfigurer",
   "allDeclaredFields":true,
   "allDeclaredMethods":true,
-  "allDeclaredConstructors":true
+  "allDeclaredConstructors":true,
+  "methods":[{"name":"getCollectionValueType","parameterTypes":["java.lang.Object","java.lang.String","boolean"] }]
 },
 {
   "name":"org.apache.camel.component.caffeine.lrucache.CaffeineLRUCacheFactory",
@@ -756,6 +859,12 @@
   "allDeclaredFields":true,
   "allDeclaredMethods":true,
   "allPublicMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"org.apache.camel.component.jackson.JacksonDataFormatConfigurer",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
   "allDeclaredConstructors":true
 },
 {
@@ -1286,6 +1395,7 @@
     {"name":"isAllowUseOriginalMessage","parameterTypes":[] }, 
     {"name":"isAutoCreateComponents","parameterTypes":[] }, 
     {"name":"isAutoStartup","parameterTypes":[] }, 
+    {"name":"isAutowiredEnabled","parameterTypes":[] }, 
     {"name":"isBacklogTracing","parameterTypes":[] }, 
     {"name":"isCaseInsensitiveHeaders","parameterTypes":[] }, 
     {"name":"isDebugging","parameterTypes":[] }, 
@@ -1326,6 +1436,7 @@
     {"name":"setAsyncProcessorAwaitManager","parameterTypes":["org.apache.camel.spi.AsyncProcessorAwaitManager"] }, 
     {"name":"setAutoCreateComponents","parameterTypes":["boolean"] }, 
     {"name":"setAutoStartup","parameterTypes":["java.lang.Boolean"] }, 
+    {"name":"setAutowiredEnabled","parameterTypes":["java.lang.Boolean"] }, 
     {"name":"setBacklogTracing","parameterTypes":["java.lang.Boolean"] }, 
     {"name":"setBeanIntrospection","parameterTypes":["org.apache.camel.spi.BeanIntrospection"] }, 
     {"name":"setBeanPostProcessor","parameterTypes":["org.apache.camel.spi.CamelBeanPostProcessor"] }, 
@@ -1459,6 +1570,24 @@
   "allDeclaredFields":true,
   "allDeclaredMethods":true,
   "allPublicMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"org.apache.camel.language.csimple.springboot.CSimpleLanguageAutoConfiguration",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"org.apache.camel.language.csimple.springboot.CSimpleLanguageAutoConfiguration$1",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "methods":[{"name":"isEnabled","parameterTypes":["java.lang.String","org.apache.camel.spi.Language"] }]
+},
+{
+  "name":"org.apache.camel.language.csimple.springboot.CSimpleLanguageConfiguration",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
   "allDeclaredConstructors":true
 },
 {
@@ -1627,6 +1756,7 @@
     {"name":"getXmlRoutes","parameterTypes":[] }, 
     {"name":"isAllowUseOriginalMessage","parameterTypes":[] }, 
     {"name":"isAutoStartup","parameterTypes":[] }, 
+    {"name":"isAutowiredEnabled","parameterTypes":[] }, 
     {"name":"isBacklogTracing","parameterTypes":[] }, 
     {"name":"isBeanIntrospectionExtendedStatistics","parameterTypes":[] }, 
     {"name":"isBeanPostProcessorEnabled","parameterTypes":[] }, 
@@ -1659,6 +1789,7 @@
     {"name":"isUseMdcLogging","parameterTypes":[] }, 
     {"name":"setAllowUseOriginalMessage","parameterTypes":["boolean"] }, 
     {"name":"setAutoStartup","parameterTypes":["boolean"] }, 
+    {"name":"setAutowiredEnabled","parameterTypes":["boolean"] }, 
     {"name":"setBacklogTracing","parameterTypes":["boolean"] }, 
     {"name":"setBeanIntrospectionExtendedStatistics","parameterTypes":["boolean"] }, 
     {"name":"setBeanIntrospectionLoggingLevel","parameterTypes":["org.apache.camel.LoggingLevel"] }, 
@@ -1954,6 +2085,10 @@
   "allPublicMethods":true
 },
 {
+  "name":"org.apache.camel.spi.RouteTemplateParameterSource",
+  "allDeclaredMethods":true
+},
+{
   "name":"org.apache.camel.spi.ThreadPoolProfile",
   "allDeclaredMethods":true
 },
@@ -2221,6 +2356,18 @@
   "allDeclaredConstructors":true
 },
 {
+  "name":"org.apache.camel.spring.boot.routetemplate.CamelRouteTemplateAutoConfiguration",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"org.apache.camel.spring.boot.routetemplate.CamelRouteTemplateConfigurationProperties",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
   "name":"org.apache.camel.spring.boot.security.CamelSSLAutoConfiguration$Condition",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -2275,14 +2422,14 @@
     {"name":"getEndpointPropertyConfigurer","parameterTypes":[] }, 
     {"name":"getExtension","parameterTypes":["java.lang.Class"] }, 
     {"name":"getSupportedExtensions","parameterTypes":[] }, 
-    {"name":"isBasicPropertyBinding","parameterTypes":[] }, 
+    {"name":"isAutowiredEnabled","parameterTypes":[] }, 
     {"name":"isBridgeErrorHandler","parameterTypes":[] }, 
     {"name":"isLazyStartProducer","parameterTypes":[] }, 
     {"name":"resolveAndRemoveReferenceListParameter","parameterTypes":["java.util.Map","java.lang.String","java.lang.Class"] }, 
     {"name":"resolveAndRemoveReferenceListParameter","parameterTypes":["java.util.Map","java.lang.String","java.lang.Class","java.util.List"] }, 
     {"name":"resolveAndRemoveReferenceParameter","parameterTypes":["java.util.Map","java.lang.String","java.lang.Class"] }, 
     {"name":"resolveAndRemoveReferenceParameter","parameterTypes":["java.util.Map","java.lang.String","java.lang.Class","java.lang.Object"] }, 
-    {"name":"setBasicPropertyBinding","parameterTypes":["boolean"] }, 
+    {"name":"setAutowiredEnabled","parameterTypes":["boolean"] }, 
     {"name":"setBridgeErrorHandler","parameterTypes":["boolean"] }, 
     {"name":"setCamelContext","parameterTypes":["org.apache.camel.CamelContext"] }, 
     {"name":"setLazyStartProducer","parameterTypes":["boolean"] }, 
@@ -3233,10 +3380,6 @@
   "methods":[{"name":"<init>","parameterTypes":["org.springframework.boot.SpringApplication","java.lang.String[]"] }]
 },
 {
-  "name":"org.springframework.boot.context.logging.ClasspathLoggingApplicationListener",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
   "name":"org.springframework.boot.context.logging.LoggingApplicationListener",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -3361,7 +3504,7 @@
   "allPublicMethods":true
 },
 {
-  "name":"org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter$$Lambda$429/29183965",
+  "name":"org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter$$Lambda$498/0x0000000840345440",
   "allDeclaredFields":true,
   "allDeclaredMethods":true
 },
@@ -3794,6 +3937,10 @@
     {"name":"addPrinter","parameterTypes":["org.springframework.format.Printer"] }, 
     {"name":"setEmbeddedValueResolver","parameterTypes":["org.springframework.util.StringValueResolver"] }
   ]
+},
+{
+  "name":"org.springframework.graalvm.utils.LiteConfigurationInitializer",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.http.ReactiveHttpInputMessage"
@@ -4461,6 +4608,16 @@
   ]
 },
 {
+  "name":"org.springframework.web.servlet.view.AbstractUrlBasedView",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.springframework.web.servlet.view.AbstractView",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
   "name":"org.springframework.web.servlet.view.BeanNameViewResolver",
   "allDeclaredFields":true,
   "allDeclaredMethods":true
@@ -4472,6 +4629,11 @@
 },
 {
   "name":"org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.springframework.web.servlet.view.InternalResourceView",
   "allDeclaredFields":true,
   "allDeclaredMethods":true
 },
@@ -4524,15 +4686,7 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"sun.security.provider.PolicyFile",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
   "name":"sun.security.provider.SHA",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"sun.security.provider.Sun",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 }
 ]

@@ -1,5 +1,6 @@
 {
-  "resources":[
+  "resources":{
+  "includes":[
     {"pattern":"\\QMETA-INF/maven/org.apache.camel/camel-base/pom.properties\\E"}, 
     {"pattern":"\\QMETA-INF/services/javax.xml.stream.XMLInputFactory\\E"}, 
     {"pattern":"\\QMETA-INF/services/javax.xml.stream.XMLOutputFactory\\E"}, 
@@ -13,6 +14,7 @@
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/bean-endpoint\\E"}, 
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/direct-component\\E"}, 
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/direct-endpoint\\E"}, 
+    {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/json-jackson-dataformat\\E"}, 
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/org.apache.camel.spi.RestConfiguration\\E"}, 
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/rest-api-component\\E"}, 
     {"pattern":"\\QMETA-INF/services/org/apache/camel/configurer/rest-api-endpoint\\E"}, 
@@ -47,6 +49,7 @@
     {"pattern":"\\Qorg/apache/camel/example/springboot/UserService.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/example/springboot/UserServiceImpl.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/language/constant/springboot/ConstantLanguageAutoConfiguration.class\\E"}, 
+    {"pattern":"\\Qorg/apache/camel/language/csimple/springboot/CSimpleLanguageAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/language/header/springboot/HeaderLanguageAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/language/property/springboot/ExchangePropertyLanguageAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/language/ref/springboot/RefLanguageAutoConfiguration.class\\E"}, 
@@ -67,6 +70,7 @@
     {"pattern":"\\Qorg/apache/camel/spring/boot/cloud/CamelCloudServiceFilterAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/spring/boot/cluster/ClusteredRouteControllerAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/spring/boot/properties/PropertiesComponentAutoConfiguration.class\\E"}, 
+    {"pattern":"\\Qorg/apache/camel/spring/boot/routetemplate/CamelRouteTemplateAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/spring/boot/security/CamelSSLAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/spring/boot/threadpool/CamelThreadPoolAutoConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/apache/camel/spring/boot/util/ConditionalOnCamelContextAndAutoConfigurationBeans$OnCamelAutoConfiguration.class\\E"}, 
@@ -187,6 +191,7 @@
     {"pattern":"\\Qorg/springframework/context/annotation/Role.class\\E"}, 
     {"pattern":"\\Qorg/springframework/core/Ordered.class\\E"}, 
     {"pattern":"\\Qorg/springframework/core/annotation/Order.class\\E"}, 
+    {"pattern":"\\Qorg/springframework/http/mime.types\\E"}, 
     {"pattern":"\\Qorg/springframework/transaction/annotation/AbstractTransactionManagementConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/springframework/transaction/annotation/EnableTransactionManagement.class\\E"}, 
     {"pattern":"\\Qorg/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class\\E"}, 
@@ -195,8 +200,9 @@
     {"pattern":"\\Qorg/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class\\E"}, 
     {"pattern":"\\Qorg/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport$NoOpValidator.class\\E"}, 
     {"pattern":"\\Qorg/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.class\\E"}, 
-    {"pattern":"\\Qorg/springframework/web/servlet/config/annotation/WebMvcConfigurer.class\\E"}
-  ],
+    {"pattern":"\\Qorg/springframework/web/servlet/config/annotation/WebMvcConfigurer.class\\E"}, 
+    {"pattern":"\\Qorg/springframework/web/util/HtmlCharacterEntityReferences.properties\\E"}
+  ]},
   "bundles":[
     {"name":"javax.servlet.LocalStrings"}, 
     {"name":"javax.servlet.http.LocalStrings"}, 

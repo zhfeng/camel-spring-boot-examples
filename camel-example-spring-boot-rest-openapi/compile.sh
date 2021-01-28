@@ -2,7 +2,7 @@
 
 ARTIFACT=camel-example-spring-boot-rest-openapi
 MAINCLASS=org.apache.camel.example.springboot.Application
-VERSION=3.7.0-SNAPSHOT
+VERSION=3.7.0
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -12,7 +12,7 @@ rm -rf target
 mkdir -p target/native-image
 
 echo "Packaging $ARTIFACT with Maven"
-mvn -ntp package > target/native-image/output.txt
+../mvnw -ntp package > target/native-image/output.txt
 
 JAR="$ARTIFACT-$VERSION.jar"
 rm -f $ARTIFACT
