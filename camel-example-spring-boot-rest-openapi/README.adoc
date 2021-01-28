@@ -14,6 +14,15 @@ You can build this example using:
 
     $ mvn package
 
+=== Build and Run with spring-native
+
+You can build
+
+    $ export GRAALVM_HOME=/path/to/graalvm-ce-java11-20.3.0
+    $ ./compile.sh
+
+And can get the sucessful native execution on `target/camel-example-spring-boot-rest-openapi`
+
 === Run
 
 You can run this example using:
